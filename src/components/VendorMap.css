@@ -1,0 +1,72 @@
+/* Fixes for Leaflet layout + grey bar issue */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  z-index: 1;
+}
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-popup-content {
+  z-index: 1 !important;
+}
+
+/* Page layout */
+.vendor-map-wrapper {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.vendor-title {
+  color: #cc6600;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+/* Map container */
+.map-container {
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  cursor: pointer;
+  transition: height 0.4s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container.collapsed {
+  height: 250px;
+}
+
+.map-container.expanded {
+  height: 600px;
+}
+
+/* Hover effect to hint interactivity */
+.map-container:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.005);
+}
+
+/* Link back to home */
+.back-button {
+  margin-top: 20px;
+}
+
+.back-button a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button a:hover {
+  text-decoration: underline;
+}
+

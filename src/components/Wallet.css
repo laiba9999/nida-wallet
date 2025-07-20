@@ -1,0 +1,46 @@
+.wallet-container {
+  font-family: Arial, sans-serif;
+  background-color: #f7f6f3;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.wallet-container header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wallet-container .balance-box {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.wallet-container .balance {
+  font-size: 2em;
+  color: #008060;
+  margin: 0;
+}
+
+.wallet-container .wallet-buttons {
+  max-width: 400px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wallet-container .wallet-buttons button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #cc6600;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}

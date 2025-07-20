@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Wallet from './components/Wallet';
+import VendorMap from './components/VendorMap';
+import CashSellers from './components/CashSellers';
+import ExchangeRateWidget from './components/ExchangeRateWidget';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Wallet />} />
+        <Route path="/vendors" element={<VendorMap />} />
+        <Route path="/cash-sellers" element={<CashSellers />} /> {/* ✅ This is required */}
+        <Route path="/exchange-rates" element={<ExchangeRateWidget />} /> {/* Optional, if you want to include the exchange rate widget */}
+      </Routes>
+    </Router>
   );
 }
 
